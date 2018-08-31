@@ -1,6 +1,5 @@
 import time
 import datetime
-import sendemail
 import subprocess as sp
 import sys
 # -*- coding: utf-8 -*-
@@ -154,22 +153,16 @@ class Ui_Dialog(object):
         TASK = self.textEdit.toPlainText()
         HOUR = str(self.comboBox.currentText())
         MINUTE = str(self.comboBox_2.currentText())
-        # userIdd=str(self.textEdit_2.toPlainText())
+        userIdd=self.textEdit_2.toPlainText()
         # userId = '"'+userIdd'"'
         # str(userId)
         #print(userId)
         print(TASK)
         print(HOUR)
         print(MINUTE)
+        print(userIdd)
 
-        # conn = sqlite3.connect('mydatabase.db')
-
-        # print("Opened database successfully");
-
-        # conn.execute("INSERT INTO REMINDER VALUES ('"+TASK+"', "+HOUR+", "+MINUTE+")")
-
-        # conn.commit()
-        # print("Records created successfully");
+        
 
         startTime = HOUR+" : "+MINUTE
         str(startTime)
@@ -208,16 +201,15 @@ class Ui_Dialog(object):
         s.starttls()
         print("sending email")
          
+            //enter your email and password here
         # Authentication
-        //enter your email id here
-        s.login("", "")
+        s.login(//your_email, //your_password)
 
         # message to be sent
         #rec = input("Enter the sender's email")
          
         # sending the mail
-        //your email id and senders email id to send the mail
-        s.sendmail("","",TASK)
+        s.sendmail(//your_email,userIdd,TASK)
         
         print("email send succesfully")
 
