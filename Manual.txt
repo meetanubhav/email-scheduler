@@ -1,8 +1,0 @@
-Install these following files:
-* PyQt5
-* PyQt5 designer
-* Python3
-
-***Mentioned in comment line where to enter your email id and password to send from your email id
-and also the email of the sender. //find in the code(mailschedule.py)
-
